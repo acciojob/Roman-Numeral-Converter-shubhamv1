@@ -10,6 +10,16 @@ function convertToRoman(num) {
     };
 
   //your code here
+	let romanNumeral = '';
+
+  for (let key in romanSymbols) {
+    while (num >= key) {
+      romanNumeral += romanSymbols[key];
+      num -= key;
+    }
+  }
+
+  return romanNumeral;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
